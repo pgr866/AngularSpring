@@ -1,0 +1,19 @@
+<div *ngIf="hero">
+  <h2>{{hero.name | uppercase}} Details</h2>
+  <div><span>id: </span>{{hero.id}}</div>
+  <div>
+    <label for="hero-name">Hero name: </label>
+    <input id="hero-name" [(ngModel)]="hero.name" (ngModelChange)="updateHero()" placeholder="Hero name"/>
+  </div>
+  <div>
+    <h3>Super Powers</h3>
+    <ul>
+      <li *ngFor="let superpower of hero.superpowers; let i = index">
+        {{superpower.name}} <button (click)="removeSuperPower(i)">Remove</button>
+      </li>
+    </ul>
+    <input [(ngModel)]="newSuperPower" placeholder="New super power"/>
+    <button (click)="addSuperPower()">Add Super Power</button>
+  </div>
+  <button type="button" (click)="goBack()">go back</button>
+</div>
