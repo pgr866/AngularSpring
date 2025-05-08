@@ -15,15 +15,15 @@ public class DataInitializer {
     public CommandLineRunner initDatabase(HeroRepository heroRepository) {
         return args -> {
             if (heroRepository.count() == 0) {
-                heroRepository.save(new Hero("Dr. Nice"));
-                heroRepository.save(new Hero("Bombasto"));
-                heroRepository.save(new Hero("Celeritas"));
-                heroRepository.save(new Hero("Magneta"));
-                heroRepository.save(new Hero("RubberMan"));
-                heroRepository.save(new Hero("Dynama"));
-                heroRepository.save(new Hero("Dr. IQ"));
-                heroRepository.save(new Hero("Magma"));
-                heroRepository.save(new Hero("Tornado"));
+                heroRepository.save(new Hero("Hulk", "http://i.annihil.us/u/prod/marvel/i/mg/5/a0/538615ca33ab0.jpg"));
+                heroRepository.save(new Hero("Thor", "http://i.annihil.us/u/prod/marvel/i/mg/d/d0/5269657a74350.jpg"));
+                heroRepository.save(new Hero("Spider-Man (Peter Parker)", "http://i.annihil.us/u/prod/marvel/i/mg/3/50/526548a343e4b.jpg"));
+                heroRepository.save(new Hero("Iron Man", "http://i.annihil.us/u/prod/marvel/i/mg/9/c0/527bb7b37ff55.jpg"));
+                heroRepository.save(new Hero("Black Widow", "http://i.annihil.us/u/prod/marvel/i/mg/f/30/50fecad1f395b.jpg"));
+                heroRepository.save(new Hero("Wolverine", "http://i.annihil.us/u/prod/marvel/i/mg/2/60/537bcaef0f6cf.jpg"));
+                heroRepository.save(new Hero("Captain America", "http://i.annihil.us/u/prod/marvel/i/mg/3/50/537ba56d31087.jpg"));
+                heroRepository.save(new Hero("Deadpool", "http://i.annihil.us/u/prod/marvel/i/mg/9/90/5261a86cacb99.jpg"));
+                heroRepository.save(new Hero("Doctor Strange", "http://i.annihil.us/u/prod/marvel/i/mg/5/f0/5261a85a501fe.jpg"));
             }
         };
     }
