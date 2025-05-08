@@ -35,7 +35,7 @@ export class HeroDetailComponent {
 
   updateHero(): void {
     if (this.hero) {
-      this.heroService.updateHero(this.hero).subscribe();
+      this.heroService.updateHero(this.hero).subscribe(updatedHero => this.hero = updatedHero);
     }
   }
 

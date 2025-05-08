@@ -6,12 +6,14 @@ import java.util.List;
 public class HeroDTO {
     private Long id;
     private String name;
+    private String image;
     private List<Superpower> superpowers;
 
-    public HeroDTO(Long id, String name, List<Superpower> superpowers) {
+    public HeroDTO(Long id, String name, List<Superpower> superpowers, String image) {
         this.id = id;
         this.name = name;
         this.superpowers = superpowers;
+        this.image = image;
     }
 
     public Long getId() {
@@ -21,6 +23,10 @@ public class HeroDTO {
     public String getName() {
         return name;
     }
+
+    public String getImage() {
+        return image;
+    }    
 
     public List<Superpower> getSuperpowers() {
         return superpowers;
@@ -32,6 +38,10 @@ public class HeroDTO {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
     }
 
     public void setSuperpowers(List<Superpower> superpowers) {

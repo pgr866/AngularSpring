@@ -12,6 +12,7 @@ public class Hero {
     private Long id;
 
     private String name;
+    private String image;
 
     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = false)
     @JoinColumn(name = "hero_id")
@@ -24,12 +25,22 @@ public class Hero {
         this.superpowers = new ArrayList<>();
     }
 
+    public Hero(String name, String image) {
+        this.name = name;
+        this.image = image;
+        this.superpowers = new ArrayList<>();
+    }
+
     public Long getId() {
         return id;
     }
 
     public String getName() {
         return name;
+    }
+
+    public String getImage() {
+        return image;
     }
 
     public List<Superpower> getSuperpowers() {
@@ -42,6 +53,10 @@ public class Hero {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
     }
 
     public void setSuperpowers(List<Superpower> superpowers) {

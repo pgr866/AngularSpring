@@ -9,12 +9,13 @@ import java.util.ArrayList;
 public class HeroMapper {
 
     public HeroDTO toDto(Hero hero) {
-        return new HeroDTO(hero.getId(), hero.getName(), hero.getSuperpowers());
+        return new HeroDTO(hero.getId(), hero.getName(), hero.getSuperpowers(), hero.getImage());
     }
 
     public Hero toEntity(HeroDTO heroDTO) {
         Hero hero = new Hero(heroDTO.getName());
         hero.setId(heroDTO.getId());
+        hero.setImage(heroDTO.getImage());
         hero.setSuperpowers(new ArrayList<>());
         if (heroDTO.getSuperpowers() != null) {
             heroDTO.getSuperpowers().forEach(sp -> {

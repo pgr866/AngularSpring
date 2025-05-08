@@ -23,6 +23,10 @@ button:disabled {
   cursor: auto;
 }
 
+.medium-image {
+  width: 200px;
+  height: auto;
+}
 
 /*
 Copyright Google LLC. All Rights Reserved.
